@@ -1,0 +1,87 @@
+Script started on Sun 04 Dec 2016 03:14:56 PM EST
+bash-4.3$ make
+g++ -c Graph.cpp
+g++ -c Queue.cpp
+g++ -c List.cpp
+g++ -c UnionFind.cpp
+g++ -c Client.cpp
+g++ Graph.o Queue.o List.o UnionFind.o Client.o -o ass6
+bash-4.3$ ./ass6 < input.txt
+
+
+Compiled
+
+How many nodes in the graph? 
+
+
+|NODE 0|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 1|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 2|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 3|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 4|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 5|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 6|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 7|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 8|
+Connecting node (enter a char to exit): 
+
+Node 0 -> 1 -> 7 -> NULL
+
+Node 1 -> 2 -> 7 -> NULL
+
+Node 2 -> 3 -> 8 -> 5 -> NULL
+
+Node 3 -> 4 -> 5 -> NULL
+
+Node 4 -> 5 -> NULL
+
+Node 5 -> 6 -> NULL
+
+Node 6 -> 7 -> 8 -> NULL
+
+Node 7 -> 8 -> NULL
+
+Node 8 -> NULL
+
+Starting Node: 
+
+MINIMUM SPANNING TREE
+
+0 - 1
+1 - 2
+2 - 3
+3 - 4
+2 - 5
+5 - 6
+0 - 7
+7 - 8
+
+
+END EXECUTION
+
+bash-4.3$ exit
+exit
+
+Script done on Sun 04 Dec 2016 03:15:12 PM EST

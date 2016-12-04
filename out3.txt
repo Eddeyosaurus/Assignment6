@@ -1,0 +1,47 @@
+Script started on Sun 04 Dec 2016 03:16:51 PM EST
+bash-4.3$ make
+make: Nothing to be done for 'all'.
+bash-4.3$ ./ass6 < input.txt[C[C2.txt
+
+
+Compiled
+
+How many nodes in the graph? 
+
+
+|NODE 0|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 1|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 2|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 3|
+Connecting node (enter a char to exit): 
+
+Node 0 -> 1 -> 2 -> 3 -> NULL
+
+Node 1 -> 3 -> NULL
+
+Node 2 -> 3 -> NULL
+
+Node 3 -> NULL
+
+
+SOURCE	DESTINATION	WEIGHT
+
+1	3		-15
+0	2		-6
+2	3		4
+
+
+END EXECUTION
+
+bash-4.3$ exit
+exit
+
+Script done on Sun 04 Dec 2016 03:17:42 PM EST

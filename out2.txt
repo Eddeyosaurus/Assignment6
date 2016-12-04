@@ -1,0 +1,52 @@
+Script started on Sun 04 Dec 2016 03:15:45 PM EST
+bash-4.3$ make
+g++ -c Graph.cpp
+g++ -c Queue.cpp
+g++ -c List.cpp
+g++ -c UnionFind.cpp
+g++ -c Client.cpp
+g++ Graph.o Queue.o List.o UnionFind.o Client.o -o ass6
+bash-4.3$ ./ass5[K6 < input2.txt
+
+
+Compiled
+
+How many nodes in the graph? 
+
+
+|NODE 0|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 1|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 2|
+Connecting node (enter a char to exit): Weight: 
+Connecting node (enter a char to exit): 
+|NODE 3|
+Connecting node (enter a char to exit): 
+
+Node 0 -> 1 -> 2 -> 3 -> NULL
+
+Node 1 -> 3 -> NULL
+
+Node 2 -> 3 -> NULL
+
+Node 3 -> NULL
+
+
+SOURCE	DESTINATION	WEIGHT
+
+2	3		4
+0	3		5
+0	1		10
+
+
+END EXECUTION
+
+bash-4.3$ exit
+exit
+
+Script done on Sun 04 Dec 2016 03:16:15 PM EST
