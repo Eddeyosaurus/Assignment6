@@ -2,6 +2,7 @@
 #define QUEUE_
 
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ class Queue{
 		typedef Node* nodePtr;
 		struct Node{
 			int data;
+			int weight;
 			nodePtr next;
 			nodePtr prev;
 
@@ -22,8 +24,10 @@ class Queue{
 		Queue& operator=(const Queue& other);
 		Queue(const Queue& other);
 
-		void Enqueue(int);
+		void Enqueue(int, int);
         int Dequeue();
+        void Find();
+        void FixPriority();
         bool IsEmpty();
 		void Print();
 

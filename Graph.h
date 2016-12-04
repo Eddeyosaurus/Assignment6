@@ -3,9 +3,12 @@
 
 #include <sstream>
 #include <iostream>
+#include <limits>
+#include <limits.h>
+#include <stdio.h>
 #include "List.h"
-#include "Stack.h"
 #include "Queue.h"
+#include "UnionFind.h"
 
 using namespace std;
 
@@ -26,18 +29,16 @@ class Graph{
 		//Sets each nodes adjcencies
 		//Pre: SetNumNodes has been called
 		//Post: All adjacencies set.
+
+		void PrintAdjLists();
         
         int GetNumNodes();
-        
-        void BreadthFirstSearch(int s);
-        
-        void DepthFirstSearch(int s);
-        
-        void PrintAdjLists();
-        
-        void PrintBFS();
-        
-        void PrintDFS();
+       
+        void Prims(int);
+
+        void PrintMST();
+
+        void KruskalMST();
 
 	private:
         int CheckInput(string input);
@@ -45,22 +46,22 @@ class Graph{
         void SetDiscovered();
         
         bool IsDiscovered(int s);
+
+        void InitializeKeys();
         
 		int numNodes;
         
         bool* discovered;
-        
-        int numDiscovered;
-        
-        int* dfsArray;
-        
-        int* bfsArray;
 
 		List* adjList;
-        
-        Queue bfsQ;
-        
-        Stack dfsStack;
+
+        int* key;
+
+        int* mst;
+
+        Queue Pqueue;
+
+        int edges;
 
 };
 #endif

@@ -12,6 +12,7 @@ class List{
 		typedef Node* nodePtr;
 		struct Node{
 			int data;
+			int weight;
 			nodePtr next;
 			nodePtr prev;
 
@@ -25,8 +26,10 @@ class List{
         void Reset();
         bool GetNext();
         int GetData();
-		void Insert(int i);
+        int GetWeight();
+		void Insert(int i, int w);
 		void Print();
+		bool Empty();
 
 
 	private:

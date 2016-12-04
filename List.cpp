@@ -29,6 +29,7 @@ List::List(const List& other)
 		current = head;
 
 		current->data = otherPtr->data;
+		current->weight = otherPtr->weight;
 		otherPtr = otherPtr->next;
 		
 		while(otherPtr)
@@ -36,6 +37,7 @@ List::List(const List& other)
 			current->next = new Node;
 			current = current->next;
 			current->data = otherPtr->data;
+			current->weight = otherPtr->weight;
 			tail = current;
 			otherPtr = otherPtr->next;
 		}
@@ -58,6 +60,7 @@ List& List::operator=(const List& other)
 		current = head;
 
 		current->data = otherPtr->data;
+		current->weight = otherPtr->weight;
 		otherPtr = otherPtr->next;
 		
 		while(otherPtr)
@@ -65,6 +68,7 @@ List& List::operator=(const List& other)
 			current->next = new Node;
 			current = current->next;
 			current->data = otherPtr->data;
+			current->weight = otherPtr->weight;
 			tail = current;
 			otherPtr = otherPtr->next;
 		}
@@ -76,10 +80,11 @@ List& List::operator=(const List& other)
 	}
 }
 
-void List::Insert(int i)
+void List::Insert(int i, int w)
 {
 	nodePtr temp = new Node;
 	temp->data = i;
+	temp->weight = w;
 
 	current = head;
 
@@ -91,6 +96,7 @@ void List::Insert(int i)
 	else{
 		tail->next = temp;
         tail = tail->next;
+        tail->next = NULL;
     }
 }
 
@@ -118,16 +124,32 @@ int List::GetData()
     return current->data;
 }
 
+int List::GetWeight()
+{
+	return current->weight;
+}
+
 
 void List::Print()
 {
     current = head;
+
+    if(head)
+    {
+    	cout << " -> " << current->data;
     
-    cout << current->data << " ";
-    
-	while(GetNext())
-	{
-		cout << current->data << " ";
+		while(GetNext())
+		{
+			cout << " -> " << current->data;
+		}
 	}
-	
+}
+
+
+bool List::Empty()
+{
+	if(head)
+		return false;
+
+	return true;
 }
